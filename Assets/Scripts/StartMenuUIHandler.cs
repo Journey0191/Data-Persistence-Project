@@ -8,7 +8,6 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using TMPro;
 
 [DefaultExecutionOrder(1000)]
 
@@ -27,6 +26,16 @@ public class StartMenuUIHandler : MonoBehaviour
     {
         DataManager.Instance.UserName = UserNameInputField.text;
         SceneManager.LoadScene(1);
+    }
+
+    public void LoadRankingScene()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+    public void LoadSettingingScene()
+    {
+        SceneManager.LoadScene(3);
     }
 
     public void Exit()

@@ -22,6 +22,8 @@ public class MainManager : MonoBehaviour
     public string m_BestScoreUserName;
     public int m_BestScore;
 
+    private List<RankUserData> m_RankUserDataList;
+
     private bool m_GameOver = false;
 
     void Start()
@@ -80,6 +82,16 @@ public class MainManager : MonoBehaviour
             m_BestScoreUserName = m_UserName;
             RefreshBestScore();
         }
+
+        for (int i = m_RankUserDataList.Count - 1; i >= 0; i--)
+        {
+            if (m_Points > m_RankUserDataList[i].userScore)
+            {
+                m_RankUserDataList[i].userName = m_UserName;
+                m_RankUserDataList[i].userScore = m_Points;
+                break;
+            }
+        }
     }
 
     void GetData()
@@ -87,6 +99,7 @@ public class MainManager : MonoBehaviour
         m_UserName = DataManager.Instance.UserName;
         m_BestScore = DataManager.Instance.BestScore;
         m_BestScoreUserName = DataManager.Instance.BestScoreUserName;
+        m_RankUserDataList = DataManager.Instance.RankUserDataList;
     }
 
     void RefreshBestScore()
@@ -99,6 +112,7 @@ public class MainManager : MonoBehaviour
         m_GameOver = true;
         DataManager.Instance.BestScore = m_BestScore;
         DataManager.Instance.BestScoreUserName = m_BestScoreUserName;
+        
         DataManager.Instance.SaveBestScoreData();
         GameOverText.SetActive(true);
     }

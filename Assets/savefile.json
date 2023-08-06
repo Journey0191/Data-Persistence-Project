@@ -1,0 +1,46 @@
+{
+    "BestScore": 65,
+    "BestScoreUserName": "Journey",
+    "RankUserDataList": [
+        {
+            "userName": "Journey",
+            "userScore": 65
+        },
+        {
+            "userName": "Honey",
+            "userScore": 25
+        },
+        {
+            "userName": "Only",
+            "userScore": 5
+        },
+        {
+            "userName": "Daisy",
+            "userScore": 3
+        },
+        {
+            "userName": "Memory",
+            "userScore": 1
+        },
+        {
+            "userName": "-",
+            "userScore": 0
+        },
+        {
+            "userName": "-",
+            "userScore": 0
+        },
+        {
+            "userName": "-",
+            "userScore": 0
+        },
+        {
+            "userName": "-",
+            "userScore": 0
+        },
+        {
+            "userName": "-",
+            "userScore": 0
+        }
+    ]
+}
