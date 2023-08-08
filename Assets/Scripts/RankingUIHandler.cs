@@ -28,21 +28,11 @@ public class RankingUIHandler : MonoBehaviour
 
         foreach (RankUserData rankEntry in rankEntryList)
         {
-            createRankEntryTransform(rankEntry, rankListContainer, rankEntryTransformList);
+            CreateRankEntryTransform(rankEntry, rankListContainer, rankEntryTransformList);
         }
     }
 
-    private void Start()
-    {
-        
-    }
-
-    public void BackToMenu()
-    {
-        SceneManager.LoadScene(0);
-    }
-
-    private void createRankEntryTransform(RankUserData rankEntry, Transform container, List<Transform> transformList)
+    private void CreateRankEntryTransform(RankUserData rankEntry, Transform container, List<Transform> transformList)
     {
         Transform rankTransform = Instantiate(rankListTemplate, container);
         rankTransform.gameObject.SetActive(true);
@@ -68,14 +58,16 @@ public class RankingUIHandler : MonoBehaviour
 
         rankTransform.Find("RankText").GetComponent<TextMeshProUGUI>().text = rankString;
 
-        int score = rankEntry.userScore;
+        rankTransform.Find("ScoreText").GetComponent<TextMeshProUGUI>().text = rankEntry.userScore.ToString();
 
-        rankTransform.Find("ScoreText").GetComponent<TextMeshProUGUI>().text = score.ToString();
-
-        string name = rankEntry.userName;
-
-        rankTransform.Find("NameText").GetComponent<TextMeshProUGUI>().text = name;
+        rankTransform.Find("NameText").GetComponent<TextMeshProUGUI>().text = rankEntry.userName;
 
         transformList.Add(rankTransform);
     }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
 }

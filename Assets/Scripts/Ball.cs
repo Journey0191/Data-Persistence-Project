@@ -6,9 +6,22 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     private Rigidbody m_Rigidbody;
+    private Color m_Color;
+
+    private void Awake()
+    {
+        m_Color = DataManager.Instance.SettingColorDataList[3].objectColor;
+    }
 
     void Start()
     {
+        var renderer = GetComponentInChildren<Renderer>();
+
+        MaterialPropertyBlock ball = new MaterialPropertyBlock();
+        ball.SetColor("_BaseColor", m_Color);
+        
+        renderer.SetPropertyBlock(ball);
+
         m_Rigidbody = GetComponent<Rigidbody>();
     }
     

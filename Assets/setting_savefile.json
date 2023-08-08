@@ -1,0 +1,43 @@
+{
+    "BestScore": 0,
+    "BestScoreUserName": "",
+    "RankUserDataList": [],
+    "SettingColorDataList": [
+        {
+            "objectName": "Brick1",
+            "objectColor": {
+                "r": 0.95686274766922,
+                "g": 0.4000000059604645,
+                "b": 0.3921568691730499,
+                "a": 1.0
+            }
+        },
+        {
+            "objectName": "Brick2",
+            "objectColor": {
+                "r": 0.45490196347236636,
+                "g": 0.8313725590705872,
+                "b": 0.8509804010391235,
+                "a": 1.0
+            }
+        },
+        {
+            "objectName": "Brick3",
+            "objectColor": {
+                "r": 1.0,
+                "g": 0.9058823585510254,
+                "b": 0.5764706134796143,
+                "a": 1.0
+            }
+        },
+        {
+            "objectName": "Ball",
+            "objectColor": {
+                "r": 0.5176470875740051,
+                "g": 0.35686275362968447,
+                "b": 0.6549019813537598,
+                "a": 1.0
+            }
+        }
+    ]
+}

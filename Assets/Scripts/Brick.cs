@@ -10,6 +10,19 @@ public class Brick : MonoBehaviour
     
     public int PointValue;
 
+    private Color m_Color1;
+    private Color m_Color2;
+    private Color m_Color3;
+    private Color m_ColorDefault;
+
+    private void Awake()
+    {
+        m_Color1 = DataManager.Instance.SettingColorDataList[0].objectColor;
+        m_Color2 = DataManager.Instance.SettingColorDataList[1].objectColor;
+        m_Color3 = DataManager.Instance.SettingColorDataList[2].objectColor;
+        m_ColorDefault = DataManager.Instance.BrickColorDefault;
+    }
+
     void Start()
     {
         var renderer = GetComponentInChildren<Renderer>();
@@ -18,16 +31,16 @@ public class Brick : MonoBehaviour
         switch (PointValue)
         {
             case 1 :
-                block.SetColor("_BaseColor", Color.green);
+                block.SetColor("_BaseColor", m_Color1);
                 break;
             case 2:
-                block.SetColor("_BaseColor", Color.yellow);
+                block.SetColor("_BaseColor", m_Color2);
                 break;
             case 5:
-                block.SetColor("_BaseColor", Color.blue);
+                block.SetColor("_BaseColor", m_Color3);
                 break;
             default:
-                block.SetColor("_BaseColor", Color.red);
+                block.SetColor("_BaseColor", m_ColorDefault);
                 break;
         }
         renderer.SetPropertyBlock(block);

@@ -19,6 +19,7 @@ public class StartMenuUIHandler : MonoBehaviour
     private void Start()
     {
         DataManager.Instance.LoadBestScoreData();
+        DataManager.Instance.LoadSettingData();
         RefreshBestScore();
     }
 

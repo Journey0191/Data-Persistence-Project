@@ -1,25 +1,29 @@
 {
-    "BestScore": 65,
-    "BestScoreUserName": "Journey",
+    "BestScore": 94,
+    "BestScoreUserName": "Clap",
     "RankUserDataList": [
         {
+            "userName": "Clap",
+            "userScore": 94
+        },
+        {
+            "userName": "Rolling",
+            "userScore": 26
+        },
+        {
+            "userName": "BabyCat",
+            "userScore": 15
+        },
+        {
+            "userName": "Happy",
+            "userScore": 8
+        },
+        {
             "userName": "Journey",
-            "userScore": 65
+            "userScore": 4
         },
         {
-            "userName": "Honey",
-            "userScore": 25
-        },
-        {
-            "userName": "Only",
-            "userScore": 5
-        },
-        {
-            "userName": "Daisy",
-            "userScore": 3
-        },
-        {
-            "userName": "Memory",
+            "userName": "Hello",
             "userScore": 1
         },
         {
@@ -37,10 +41,7 @@
         {
             "userName": "-",
             "userScore": 0
-        },
-        {
-            "userName": "-",
-            "userScore": 0
         }
-    ]
+    ],
+    "SettingColorDataList": []
 }
